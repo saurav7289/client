@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+main{
+  margin: 5px auto;
+  background: linear-gradient(0deg, rgba(251,233,13,1) 23%, rgba(255,255,255,1) 67%);
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: 1.5fr 2fr;
+  grid-gap:10px;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo{
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar{
+  grid-row: 2/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contain-data{
+  text-align: justify;
+}
+.contain-data ul{
+  font-size: 1rem;
+}
+.contain-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image{
+  grid-column: 1/-1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.divider{
+  width: 90%;
+  margin: 10px auto;
+  border: 1px solid tomato;
 }
 
-.App-link {
-  color: #61dafb;
+
+.footer{
+  grid-column: 1/-1;
+  font-size: 1em;
+  background-color: tomato;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer ul{
+  list-style: none;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+h4{
+  text-align: justify;
+}
+
+ul li{
+  text-align: justify;
+}
+p{
+  text-align: center;
+}
+
+
+
+@media (max-width: 767px) {
+  main {
+    background: linear-gradient(360deg, rgba(251,233,13,1) 23%, rgba(255,255,255,1) 67%);
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto auto auto auto auto; 
+    
   }
-  to {
-    transform: rotate(360deg);
+
+  .sidebar {
+    grid-row: auto;
+  }
+
+  .image {
+    grid-column: auto; 
+  }
+
+  .footer {
+    grid-column: auto;
+    font-size: .5em;
   }
 }
